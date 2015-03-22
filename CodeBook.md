@@ -4,9 +4,16 @@ Process to clean Human Activity Recognition Using Smartphones Dataset
 The purpose of this codebook is provide the explanation to the process and obtain the tidy data set for the Human Activity Recognition Using Smartphones Dataset.
 
 The document contains three main sections as follows:
+* Pre-conditions: Steps which must be completed in order to perform the analysis.
 * Variables: The meaning of each variable is described in this section.
 * Data: The final available data sets are described in here.
 * Transformations: In this section is possible to find all the steps followed to generate the tidy data set from the original one.
+
+## Pre-conditions
+In order to run without error this analysis, the following steps must be followed:
+1. Download the file with the [original data set] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
+2. Unzip the downloaded file.
+3. The run_analysis.R and the unzipped files must be on the same working directory. To verify it, call dir() and see if those files are in the listing.
 
 ## Variables
 * features: Data set containing the list of all features.
