@@ -11,6 +11,7 @@ The document contains three main sections as follows:
 
 ## Pre-conditions
 In order to run without error this analysis, the following steps must be followed:
+
 1. Download the file with the [original data set] (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 2. Unzip the downloaded file.
 3. The run_analysis.R and the unzipped files must be on the same working directory. To verify it, call dir() and see if those files are in the listing.
