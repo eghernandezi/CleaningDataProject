@@ -1,7 +1,10 @@
+Process to clean Human Activity Recognition Using Smartphones Dataset 
+===============
+
 The purpose of this codebook is provide the explanation to the process and obtain the tidy data set for the Human Activity Recognition Using Smartphones Dataset.
 
 The document contains three main sections as follows:
-* Variables; The meaning of each variable is described in this section.
+* Variables: The meaning of each variable is described in this section.
 * Data: The final available data sets are described in here.
 * Transformations: In this section is possible to find all the steps followed to generate the tidy data set from the original one.
 
@@ -15,8 +18,16 @@ The document contains three main sections as follows:
 * activitySummary: Data set containing the grouped summary by subject and activity with mean for every feature.
 
 ## Data
-* activityMeasurement: Final tidy data set. It contains the test and training measures with their correspondent subject and activity. The data set is properly named.
-* activitySummary: Data set containing every subject with activity measure mean.	
+* activityMeasurement: Final tidy data set. It contains the test and training measures with their correspondent subject and activity.
+-- + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
+-- + Activity: Activity name perfomed by the subject.
+-- + Measure with postfix std(): Standard deviation measure.
+-- + Measure with postfix mean(): Mean measure.
+* activitySummary: Data set containing every subject with activity measure mean.
+-- + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
+-- + Activity: Activity name perfomed by the subject.
+-- + Measure with postfix std(): Standard deviation measure.
+-- + Measure with postfix mean(): Mean measure.	
 
 ## Transformations
 1. The features are loaded from "features.txt" file.
