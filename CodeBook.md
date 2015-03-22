@@ -19,15 +19,15 @@ The document contains three main sections as follows:
 
 ## Data
 * activityMeasurement: Final tidy data set. It contains the test and training measures with their correspondent subject and activity.
--- + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
--- + Activity: Activity name perfomed by the subject.
--- + Measure with postfix std(): Standard deviation measure.
--- + Measure with postfix mean(): Mean measure.
+    + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
+    + Activity: Activity name perfomed by the subject.
+    + Measure with postfix std(): Standard deviation measure.
+    + Measure with postfix mean(): Mean measure.
 * activitySummary: Data set containing every subject with activity measure mean.
--- + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
--- + Activity: Activity name perfomed by the subject.
--- + Measure with postfix std(): Standard deviation measure.
--- + Measure with postfix mean(): Mean measure.	
+    + Subject: Subject ID who performed the activity. It ranges from 1 to 30.
+    + Activity: Activity name perfomed by the subject.
+    + Measure with postfix std(): Standard deviation measure.
+    + Measure with postfix mean(): Mean measure.	
 
 ## Transformations
 1. The features are loaded from "features.txt" file.
