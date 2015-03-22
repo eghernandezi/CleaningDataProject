@@ -1,4 +1,8 @@
-variables <- read.table("features.txt")
+library(dplyr)
+library(plyr)
+library(reshape2)
+
+features <- read.table("features.txt")
 
 activities <- read.table("activity_labels.txt")
 names(activities) <- c("activity_id", "activity_label")
@@ -19,15 +23,14 @@ test <- mutate(test, activity = actTest[,1])
 test <- merge(test, activities, by.x = "activity", by.y = "activity_id", all = TRUE)
 test <- test[-1]
 
-activity <- rbind(train, test)
+activityMeasurement <- rbind(train, test)
 
-measures <- c(grep("*-std()*", variables[,2]), grep("*-mean()*", variables[,2]))
-activity <- activity[c(measures, 562, 563)]
-names(activity) <- c(as.character(variables[measures, 2]), "Subject ID", "Activity")
+measureLabels <- c(grep("*-std()*", features[,2]), grep("*-mean()*", features[,2]))
+activityMeasurement <- activityMeasurement[c(measureLabels, 562, 563)]
+names(activityMeasurement) <- c(as.character(features[measureLabels, 2]), "Subject", "Activity")
+activityMeasurement <- activityMeasurement[,c(80,81,1:79)]
 
-write.table(activity, "HumanActivityDataset.txt", row.name=FALSE)
+write.table(activityMeasurement, "HumanActivityDataset.txt", row.name=FALSE)
 
-
-
-s <- melt(activity, id=c("Subject ID", "Activity"))
-dcast("Subject ID" + variable ~ Activity, data = s, fun = mean)
+s <- melt(activityMeasurement, id=c("Subject", "Activity"))
+activitySummary <- dcast(Subject + variable ~ Activity, data = s, fun = mean)
