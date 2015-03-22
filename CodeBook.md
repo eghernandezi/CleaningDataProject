@@ -14,7 +14,11 @@ The document contains three main sections as follows:
 * measureLabels: Measures label.
 * activitySummary: Data set containing the grouped summary by subject and activity with mean for every feature.
 
-##
+## Data
+* activityMeasurement: Final tidy data set. It contains the test and training measures with their correspondent subject and activity. The data set is properly named.
+* activitySummary: Data set containing every subject with activity measure mean.	
+
+## Transformations
 1. The features are loaded from "features.txt" file.
 2. The activity labels are loaded from "activity_labels.txt" file. The names for the columns are asigned.
 3. The train data set is loaded. It is necessary to join the set, subjects and activities.
